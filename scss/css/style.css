@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  background: url(../assets/bg.jpg);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 55px;
+  width: 100%;
+  height: 68px;
+  background-color: #191919;
+  border-bottom: 1px solid #00ff00;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+header nav .logoTipo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 65%;
+}
+header nav .logoTipo .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  user-select: none;
+}
+header nav .logoTipo .logo a {
+  text-decoration: none;
+  max-height: 38px;
+}
+header nav .logoTipo .logo a img {
+  width: 75%;
+}
+header nav .logoTipo .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  font-family: "Bebas Neue", cursive;
+}
+header nav .logoTipo .options a {
+  text-decoration: none;
+  color: #ccc;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+header nav .logoTipo .options a:hover {
+  text-decoration: underline;
+  transition: 0.5s;
+  color: #00ff00;
+}
+header nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2em;
+  width: 50%;
+  height: 100%;
+}
+header nav .menu .category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+}
+header nav .menu .category ion-icon {
+  color: #ccc;
+  font-size: 25pt;
+}
+header nav .menu .category ion-icon:hover {
+  color: #00ff00;
+  cursor: pointer;
+}
+header nav .menu .perfil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 210px;
+  height: 100%;
+  gap: 2em;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1px;
+}
+header nav .menu .perfil li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+header nav .menu .perfil li a {
+  text-decoration: none;
+  color: #ccc;
+}
+header nav .menu .perfil li a:hover {
+  color: #00ff00;
+}
+header nav .menu .perfil li a ion-icon {
+  font-size: 1.5rem;
+}
+header nav .menu .perfil #perfis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+header nav .menu .perfil #perfis #photoPerfil {
+  border-radius: 8px;
+  width: 35px;
+  height: 35px;
+}
+header nav .menu .perfil #perfis ion-icon {
+  color: #ccc;
+}
+header nav .menu .perfil #perfis ion-icon:hover {
+  cursor: pointer;
+  color: #00ff00;
+}
+header nav .menu .searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  transition: 0.5s;
+}
+header nav .menu .searchBox:hover {
+  width: 50%;
+}
+header nav .menu .searchBox:hover .search {
+  background: #1f1f1f;
+}
+header nav .menu .searchBox .search {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+  font-size: 1em;
+  border-radius: 8px 0px 8px 0px;
+  font-family: "Bebas Neue", cursive;
+  color: #ccc;
+  background: #191919;
+}
+header nav .menu .searchBox .search::placeholder,
+header nav .menu .searchBox .search input {
+  color: #191919;
+}
+header nav .menu .searchBox .go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #191919;
+  border: none;
+}
+header nav .menu .searchBox .go ion-icon {
+  font-size: 2rem;
+  color: #ccc;
+}
+header nav .menu .searchBox .go ion-icon:hover {
+  cursor: pointer;
+  color: #00ff00;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+main .container .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+}
+main .container .top .header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 55px;
+  border-bottom: 1px dotted #00ff00;
+  background-color: rgba(25, 25, 25, 0.5411764706);
+}
+main .container .top .header-top .section-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20pt;
+  letter-spacing: 2pt;
+  color: #ccc;
+}
+main .container .top .header-top .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .top .header-top .btn ion-icon {
+  font-size: 20pt;
+  color: #ccc;
+  transition: 0.3s;
+}
+main .container .top .header-top .btn ion-icon:hover {
+  transition: 0.3s;
+  color: #00ff00;
+  cursor: pointer;
+}
+main .container .top .films-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+  border-bottom: 1px solid #00ff00;
+  padding: 10px 55px;
+}
+main .container .top .films-top .film-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  background-image: linear-gradient(163deg, #00ff00 0%, #50ff50 100%);
+  transition: all 0.3s;
+}
+main .container .top .films-top .film-top:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3019607843);
+}
+main .container .top .films-top .film-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid #00ff00;
+}
+main .container .top .films-top .film-top a img {
+  width: 9em;
+  transition: all 0.2s;
+}
+main .container .top .films-top .film-top a img:hover {
+  transform: scale(0.98);
+}
+main .container .pop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+}
+main .container .pop .header-pop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 55px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 20pt;
+  letter-spacing: 2pt;
+  color: #ccc;
+  border-bottom: 1px dotted #00ff00;
+  background-color: rgba(25, 25, 25, 0.5411764706);
+}
+main .container .pop .header-pop .select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15pt;
+}
+main .container .pop .header-pop .select #category {
+  border: none;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1pt;
+  color: #00ff00;
+  background-color: transparent;
+  cursor: pointer;
+}
+main .container .pop .header-pop .select #category option {
+  background-color: #191919;
+}
+main .container .pop .films {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  /* gap: 20px; */
+  padding: 10px 55px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #00ff00;
+}
+main .container .pop .films .film {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+main .container .pop .films .film .linkFilms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  gap: 2px;
+}
+main .container .pop .films .film .linkFilms .poster {
+  border: 1px solid #00ff00;
+  width: 8em;
+  transition: all 0.2s;
+}
+main .container .pop .films .film .linkFilms .poster:hover {
+  transform: scale(0.98);
+}
+main .container .pop .films .film .linkFilms .poster:hover .film-name {
+  color: #00ff00;
+}
+@media (max-width: 428px) {
+  main .container .pop .films .film .linkFilms .poster {
+    width: 20em;
+  }
+}
+main .container .pop .films .film .linkFilms .film-name {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
+  color: #ccc;
+}
+main .container .pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  padding: 0px 55px;
+  font-family: "Bebas Neue", cursive;
+  color: #ccc;
+  background-color: rgba(25, 25, 25, 0.5411764706);
+}
+main .container .pages .page {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+main .container .pages .number-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  gap: 10px;
+  user-select: none;
+}
+main .container .pages .number-pages .number-page {
+  width: 2%;
+  border: 1px solid #00ff00;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .pages .number-pages .number-page:hover {
+  background-color: #00ff00;
+  color: #191919;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 55px;
+  font-family: "Bebas Neue", cursive;
+  color: #ccc;
+  border-top: 1px solid #00ff00;
+}
+footer .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+footer .about a {
+  text-decoration: none;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+footer .about a:hover {
+  color: #00ff00;
+}
+footer .logotipo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+footer .logotipo .foto {
+  width: 50px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@media (max-width: 428px) {
+  body {
+    grid-template-rows: 1fr;
+  }
+
+  header {
+    padding: 10px 30px;
+    width: 100vw;
+  }
+  header nav .logoTipo .options {
+    display: none;
+  }
+  header nav .menu .searchBoxBox {
+    display: none;
+  }
+
+  main {
+    width: 100vw;
+  }
+  main .container {
+    height: auto;
+  }
+  main .container .top .header-top {
+    justify-content: center;
+  }
+  main .container .top .header-top ion-icon {
+    display: none;
+  }
+  main .container .top .films-top {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 30px;
+  }
+  main .container .top .films-top .film-top a img {
+    width: 15em;
+  }
+  main .container .pop .header-pop {
+    flex-direction: column;
+    text-align: center;
+    font-size: 15pt;
+  }
+  main .container .pop .films {
+    padding: 10px 30px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  main .container .pop .films .film .linkFilms .poster {
+    width: 15em;
+  }
+  main .container .pages {
+    padding: 10px 30px;
+    height: 50px;
+  }
+  main .container .pages .page {
+    width: 50%;
+  }
+  main .container .pages .number-pages {
+    width: 50%;
+  }
+  main .container .pages .number-pages .number-page {
+    width: 50%;
+  }
+}
+@media (max-width: 834px) {
+  body {
+    grid-template-rows: 1fr;
+  }
+
+  header {
+    padding: 10px 30px;
+    width: 100vw;
+  }
+  header nav .logoTipo .options {
+    width: 100%;
+    font-size: 15pt;
+  }
+  header nav .menu {
+    width: auto;
+  }
+  header nav .menu .searchBox {
+    display: none;
+  }
+
+  main {
+    width: 100vw;
+  }
+  main .container {
+    height: auto;
+  }
+  main .container .top .header-top {
+    justify-content: center;
+    font-size: 1pt;
+  }
+  main .container .top .header-top ion-icon {
+    display: none;
+  }
+  main .container .top .films-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px 30px;
+  }
+  main .container .top .films-top .film-top a img {
+    width: 15em;
+  }
+  main .container .pop .header-pop {
+    flex-direction: column;
+    text-align: center;
+    font-size: 15pt;
+  }
+  main .container .pop .films {
+    padding: 10px 30px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  main .container .pop .films .film .linkFilms .poster {
+    width: 15em;
+  }
+  main .container .pages {
+    padding: 10px 30px;
+    height: 50px;
+  }
+  main .container .pages .page {
+    width: 50%;
+  }
+  main .container .pages .number-pages {
+    width: 50%;
+  }
+  main .container .pages .number-pages .number-page {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./scss/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./scss/css/style.css" />
+    
+    <title>Inicio - Magflix</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logoTipo">
+          <div class="logo">
+            <a href="./index.html" class="home">
+              <img src="./scss/assets/navLogo.png" alt="logo" />
+            </a>
+          </div>
+
+          <div class="options">
+            <a href="./index.html">Inicio</a>
+            <a href="#">Série</a>
+            <a href="#">Filme</a>
+            <a href="#">Bombando</a>
+            <a href="#">Minha lista</a>
+            <a href="#">Idioma e legandas</a>
+          </div>
+        </div>
+
+        <div class="menu">
+          <div class="searchBox">
+            <input type="search" class="search" name="search" placeholder="Títulos, generos, atore..."/>
+            <button class = "go" type="submit"><ion-icon name="search-circle-outline"></ion-icon></button>
+          </div>
+
+          <ul class="perfil">
+            <li><a href="#">Infantil</a></li>
+            <li><a href="#"><ion-icon name="notifications-sharp"></ion-icon></a></li>
+            <li id="perfis"><img id="photoPerfil" src="./scss/assets/perfil.png" alt="Perfil"> <ion-icon name="caret-down-sharp"></ion-icon></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <section class="top">
+          <div class="header-top">
+            <h1 class="section-title">Top lançamentos</h1>
+            <div class="btn"><ion-icon name="code-outline"></ion-icon></div>
+          </div>
+
+          <div class="films-top">
+            <div class="film-top">
+              <a href="#" class="filmlink">
+                <img src="./scss/assets/batman.jpg" alt="film1" class="poster-top">
+                
+              </a>
+            </div>
+            <div class="film-top">
+              <a href="#" class="filmlink">
+                <img src="./scss/assets/doutorestranho2.jpg" alt="film2" class="poster-top">
+              </a>
+            </div>
+            <div class="film-top">
+              <a href="#" class="filmlink">
+                <img src="./scss/assets/sonic2.jpg" alt="film3" class="poster-top">
+              </a>
+            </div>
+            <div class="film-top">
+              <a href="#" class="filmlink">
+                <img src="./scss/assets/halo.png" alt="film4" class="poster-top">
+              </a>
+            </div>
+            <div class="film-top">
+              <a href="#" class="filmlink">
+                <img src="./scss/assets/cavaleirodalua.jpg" alt="film5" class="poster-top">
+              </a>
+            </div>
+            <div class="film-top">
+              <a href="#" class="filmlink">
+                <img src="./scss/assets/outfit.jpg" alt="film6" class="poster-top">
+              </a>
+            </div>
+            <div class="film-top">
+              <a href="#" class="filmlink">
+                <img src="./scss/assets/homemaranhasemvoltapracasa.jpg" alt="film7" class="poster-top">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="pop">
+          <div class="header-pop">
+            <h1 class="section-title">FILMES E SERIES MAIS<span> POPULARES </span></h1>
+
+            <div class="select">
+              <label for="select">CLASSIFICAR: </label>
+              <select name="category" id="category">
+                <option value="pop">Popularidade</option>
+                <option value="launch">Data de publicação</option>
+                <option value="update">Data de atualização</option>
+                <option value="year">Ano de lançamento</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="films">
+            <div class="film">
+              <a href="" class="linkFilms">
+                <img src="./scss/assets/halo.png" alt="halo" class="poster">
+                  <p class="film-name">Halo</p>
+                </img>
+              </a>
+            </div>
+            <div class="film">
+              <a href="" class="linkFilms">
+                <img src="./scss/assets/devoltaparaofuturo.jpg" alt="halo" class="poster">
+                  <p class="film-name">Devolta para o furturo</p>
+                </img>
+              </a>
+            </div>
+            <div class="film">
+              <a href="" class="linkFilms">
+                <img src="./scss/assets/guardioes.jpg" alt="halo" class="poster">
+                  <p class="film-name">Guadiões da galáxia</p>
+                </img>
+              </a>
+            </div>
+            <div class="film">
+              <a href="" class="linkFilms">
+                <img src="./scss/assets/Interstellar.png" alt="halo" class="poster">
+                  <p class="film-name">Interstellar</p>
+                </img>
+              </a>
+            </div>
+            <div class="film">
+              <a href="" class="linkFilms">
+                <img src="./scss/assets/batmanct.jpg" alt="halo" class="poster">
+                  <p class="film-name">Batiman: Cavaleiro das trevas</p>
+                </img>
+              </a>
+            </div>
+            <div class="film">
+              <a href="" class="linkFilms">
+                <img src="./scss/assets/doutorestranho1.jpg" alt="halo" class="poster">
+                  <p class="film-name">Doutor estranho</p>
+                </img>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="pages">
+          <div class="page">Páginas 1 de 5</div>
+          <div class="number-pages">
+            <div class="number-page">1</div>
+            <div class="number-page">2</div>
+            <div class="number-page">3</div>
+            <div class="number-page">4</div>
+            <div class="number-page">5</div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="about">
+        <p class="text-about">2022 | 
+        <a id="userLink" href="https://github.com/carloscunha611" target="_blank">
+          <span id="userLogin">Nick Name</span>
+        </a> 
+      </p>
+      </div>
+      <div class="logotipo">
+        <img id="userImage" class="foto" src="" alt="Foto de perfil" />
+      </div>
+    </footer>
+
+<!-- JS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./JavaScript/main.js"></script>
+  </body>
+</html>

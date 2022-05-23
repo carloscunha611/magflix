@@ -1,0 +1,389 @@
+body {
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  background: url(../assets/bg.jpg);
+}
+
+header {
+  @include display(flex, center, flex-start);
+  padding: $padding_main;
+  width: 100%;
+  height: 68px;
+  background-color: $color-primary;
+  border-bottom: 1px solid $color-main;
+
+  nav {
+    @include display(flex, center, space-between);
+    width: 100%;
+    height: 100%;
+    .logoTipo {
+      @include display(flex, center, flex-start);
+
+      width: 65%;
+      .logo {
+        @include display(flex, center, flex-start);
+        user-select: none;
+        a {
+          text-decoration: none;
+          max-height: 38px;
+
+          img {
+            width: 75%;
+          }
+        }
+      }
+
+      .options {
+        @include display(flex, center, center);
+        gap: 2em;
+        font-family: 'Bebas Neue', cursive;
+        a {
+          text-decoration: none;
+          color: $text-color;
+          letter-spacing: 1px;
+          transition: 0.3s;
+          &:hover {
+            text-decoration: underline;
+            transition: 0.5s;
+            color: $color-main;
+          }
+        }
+      }
+    }
+
+    .menu {
+      @include display(flex, center, flex-end);
+      gap: 2em;
+
+      width: 50%;
+      height: 100%;
+
+      .category {
+        @include display(flex, center, center);
+        width: 30px;
+
+        ion-icon {
+          color: $text-color;
+          font-size: 25pt;
+          &:hover {
+            color: $color-main;
+            cursor: pointer;
+          }
+        }
+      }
+      .perfil {
+        @include display(flex, center, space-between);
+        list-style: none;
+        width: 210px;
+        height: 100%;
+        gap: 2em;
+        font-family: $font-main;
+        letter-spacing: 1px;
+        li {
+          @include display(flex, center, flex-start);
+          height: 100%;
+          a {
+            text-decoration: none;
+            color: $text-color;
+            &:hover {
+              color: $color-main;
+            }
+
+            ion-icon {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        #perfis {
+          @include display(flex, center, space-between);
+
+          width: 100%;
+          #photoPerfil {
+            border-radius: 8px;
+            width: 35px;
+            height: 35px;
+          }
+
+          ion-icon {
+            color: $text-color;
+            &:hover {
+              cursor: pointer;
+              color: $color-main;
+            }
+          }
+        }
+      }
+      .searchBox {
+        @include display(flex, center, center);
+        width: 50px;
+        height: 100%;
+        transition: 0.5s;
+
+        &:hover {
+          width: 50%;
+          .search {
+            background: $color-secondary;
+          }
+        }
+        .search {
+          position: relative;
+          width: 100%;
+          height: 50%;
+          border: none;
+          padding: 10px 15px;
+          outline: none;
+          font-size: 1em;
+          border-radius: 8px 0px 8px 0px;
+          font-family: $font-main;
+          color: $text-color;
+          background: $color-primary;
+          &::placeholder,
+          input {
+            color: $color-primary;
+          }
+        }
+        .go {
+          @include display(flex, center, center);
+          height: 100%;
+          background-color: $color-primary;
+          border: none;
+          ion-icon {
+            font-size: 2rem;
+            color: $text-color;
+            &:hover {
+              cursor: pointer;
+              color: $color-main;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  @include display(flex, center, center);
+  width: 100%;
+  .container {
+    @include display(flex, center, flex-start);
+
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .top {
+      @include display(flex, center, center);
+      flex-direction: column;
+      width: 100%;
+      height: 50%;
+
+      .header-top {
+        @include display(flex, flex-start, space-between);
+        width: 100%;
+        padding: $padding_main;
+        border-bottom: 1px dotted $color-main;
+        background-color: $color-bar;
+        .section-title {
+          font-family: $font-main;
+          font-size: 20pt;
+          letter-spacing: 2pt;
+          color: $text-color;
+        }
+        .btn {
+          @include display(flex, center, center);
+          ion-icon {
+            font-size: 20pt;
+            color: $text-color;
+            transition: 0.3s;
+            &:hover {
+              transition: 0.3s;
+              color: $color-main;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .films-top {
+        @include display(flex, center, space-between);
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+        border-bottom: 1px solid $color-main;
+        padding: $padding_films;
+        .film-top {
+          @include display(flex, center, center);
+          height: fit-content;
+          width: fit-content;
+          background-image: linear-gradient(
+            163deg,
+            $color-main 0%,
+            $color-detail 100%
+          );
+          transition: all 0.3s;
+          &:hover {
+            box-shadow: 0px 0px 30px 1px $color-shadow;
+          }
+          a {
+            @include display(flex, center, center);
+            text-decoration: none;
+            border: 1px solid $color-main;
+
+            img {
+              width: 9em;
+              transition: all 0.2s;
+              &:hover {
+                transform: scale(0.98);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pop {
+      @include display(flex, center, flex-start);
+      flex-direction: column;
+      width: 100%;
+      height: 50%;
+
+      .header-pop {
+        @include display(flex, center, space-between);
+        width: 100%;
+        padding: $padding_main;
+        font-family: $font-main;
+        font-size: 20pt;
+        letter-spacing: 2pt;
+        color: $text-color;
+        border-bottom: 1px dotted $color-main;
+        background-color: $color-bar;
+        .select {
+          @include display(flex, center, center);
+          font-size: 15pt;
+          #category {
+            border: none;
+            font-family: $font-main;
+            letter-spacing: 1pt;
+            color: $color-main;
+            background-color: transparent;
+            cursor: pointer;
+            option {
+              background-color: $color-primary;
+            }
+          }
+        }
+      }
+
+      .films {
+        @include display(flex, center, space-between);
+        height: 100%;
+        width: 100%;
+        /* gap: 20px; */
+        padding: $padding_films;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $color-main;
+        .film {
+          @include display(flex, center, center);
+          flex-direction: column;
+          height: fit-content;
+          width: fit-content;
+          flex-wrap: wrap;
+
+          .linkFilms {
+            @include display(flex, center, center);
+            flex-direction: column;
+            text-decoration: none;
+            gap: 2px;
+            .poster {
+              border: 1px solid $color-main;
+              width: 8em;
+              transition: all 0.2s;
+              &:hover {
+                transform: scale(0.98);
+                .film-name {
+                  color: $color-main;
+                }
+              }
+              @media (max-width: 428px) {
+                width: 20em;
+              }
+            }
+            .film-name {
+              font-family: $font-main;
+              letter-spacing: 2px;
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+
+    .pages {
+      @include display(flex, center, center);
+      width: 100%;
+      height: 30px;
+      padding: $padding_main;
+      font-family: $font-main;
+      color: $text-color;
+      background-color: $color-bar;
+      .page {
+        @include display(flex, flex-end, flex-start);
+      }
+
+      .number-pages {
+        @include display(flex, center, center);
+        width: 90%;
+        gap: 10px;
+        user-select: none;
+
+        .number-page {
+          width: 2%;
+          border: 1px solid $color-main;
+          cursor: pointer;
+          @include display(flex, center, center);
+          &:hover {
+            background-color: $color-main;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  @include display(flex, center, space-between);
+  padding: $padding_main;
+
+  font-family: $font-main;
+  color: $text-color;
+
+  border-top: 1px solid $color-main;
+  .about {
+    @include display(flex, center, center);
+    height: 50px;
+    a {
+      text-decoration: none;
+      color: $text-color;
+      letter-spacing: 1px;
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+
+  .logotipo {
+    @include display(flex, center, center);
+
+    height: 50px;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+
+    .foto {
+      width: 50px;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+      -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+      animation: heartbeat 1.5s ease-in-out infinite both;
+    }
+  }
+}

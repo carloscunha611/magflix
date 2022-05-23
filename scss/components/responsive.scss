@@ -1,0 +1,180 @@
+@media (max-width: 428px) {
+  body {
+    grid-template-rows: 1fr;
+  }
+
+  header {
+    padding: $padding_mobile;
+    width: 100vw;
+    nav {
+      .logoTipo {
+        .options {
+          display: none;
+        }
+      }
+
+      .menu {
+        .searchBoxBox {
+          display: none;
+        }
+      }
+    }
+  }
+
+  main {
+    width: 100vw;
+    .container {
+      height: auto;
+      .top {
+        .header-top {
+          justify-content: center;
+          ion-icon {
+            display: none;
+          }
+        }
+
+        .films-top {
+          flex-direction: column;
+          justify-content: flex-start;
+          padding: $padding_mobile;
+
+          .film-top {
+            a {
+              img {
+                width: 15em;
+              }
+            }
+          }
+        }
+      }
+
+      .pop {
+        .header-pop {
+          flex-direction: column;
+          text-align: center;
+          font-size: 15pt;
+        }
+
+        .films {
+          padding: $padding_mobile;
+          flex-direction: column;
+          flex-wrap: nowrap;
+
+          .film {
+            .linkFilms {
+              .poster {
+                width: 15em;
+              }
+            }
+          }
+        }
+      }
+
+      .pages {
+        padding: $padding_mobile;
+        height: 50px;
+        .page {
+          width: 50%;
+        }
+        .number-pages {
+          width: 50%;
+          .number-page {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  body {
+    grid-template-rows: 1fr;
+  }
+
+  header {
+    padding: $padding_mobile;
+    width: 100vw;
+    nav {
+      .logoTipo {
+        .options {
+          width: 100%;
+          font-size: 15pt;
+        }
+      }
+
+      .menu {
+        width: auto;
+        .searchBox {
+          display: none;
+        }
+      }
+    }
+  }
+
+  main {
+    width: 100vw;
+    .container {
+      height: auto;
+      .top {
+        .header-top {
+          justify-content: center;
+          font-size: 1pt;
+          ion-icon {
+            display: none;
+          }
+        }
+
+        .films-top {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          padding: $padding_mobile;
+
+          .film-top {
+            a {
+              img {
+                width: 15em;
+              }
+            }
+          }
+        }
+      }
+
+      .pop {
+        .header-pop {
+          flex-direction: column;
+          text-align: center;
+          font-size: 15pt;
+        }
+
+        .films {
+          padding: $padding_mobile;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          .film {
+            .linkFilms {
+              .poster {
+                width: 15em;
+              }
+            }
+          }
+        }
+      }
+
+      .pages {
+        padding: $padding_mobile;
+        height: 50px;
+        .page {
+          width: 50%;
+        }
+        .number-pages {
+          width: 50%;
+          .number-page {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

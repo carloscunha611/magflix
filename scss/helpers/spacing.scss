@@ -1,0 +1,10 @@
+@mixin display($display, $align-items, $justify-content) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+$padding_main: 0px 55px;
+$padding_mobile: 10px 30px;
+
+$padding_films: 10px 55px;

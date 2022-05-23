@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import './colors/colors.scss';
+@import './helpers/typography.scss';
+@import './helpers/spacing.scss';
+@import './pages/home.scss';
+@import './components/responsive.scss';
