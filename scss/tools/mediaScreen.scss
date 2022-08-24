@@ -1,0 +1,69 @@
+@media (max-width: 428px) {
+  body {
+    nav {
+      justify-content: flex-end;
+      padding: $padding-barMobille;
+      .logoMobile {
+        display: block;
+      }
+
+      .options {
+        display: none;
+      }
+      .perfilOptions {
+        width: 100%;
+        ul {
+          .infantil {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .container {
+      flex-direction: column;
+      .indication {
+        display: none;
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
+
+        .tittleMovie {
+          display: none;
+        }
+        .rowMovie {
+          padding: $padding-barMobille;
+          margin-top: 50px;
+          height: 100%;
+          flex-direction: column;
+          gap: 100px;
+          .movie {
+            width: 100%;
+            &:hover {
+              width: 100%;
+            }
+
+            .pictureMovie {
+              width: 95%;
+              height: 95%;
+            }
+          }
+        }
+        .emAlta {
+          display: none;
+        }
+        .action {
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    display: block;
+  }
+}

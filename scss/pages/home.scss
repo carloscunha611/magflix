@@ -1,0 +1,325 @@
+body {
+  @include display(flex, center, space-between);
+  flex-direction: column;
+  width: 100%;
+  z-index: 1;
+  background: url(./../assets/bg.jpg);
+
+  nav {
+    @include display(flex, center, space-between);
+    height: 4em;
+    width: 100%;
+    padding: $padding-bar;
+    font-family: $font-main;
+    letter-spacing: 1px;
+    z-index: 2;
+    box-shadow: inset 0 25px 50px 0 $color-transparencia;
+
+    .logoMobile {
+      display: none;
+    }
+    .linkLogo {
+      @include display(block, center, center);
+      .logoMagflix {
+        width: auto;
+      }
+    }
+
+    .options {
+      width: 50%;
+      @include display(flex, center, space-between);
+      ul {
+        @include display(flex, center, flex-start);
+        gap: 10px;
+        li {
+          a {
+            color: $text-color;
+            transition: all 0.5s;
+            &:hover {
+              color: $green;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .perfilOptions {
+      @include display(flex, center, center);
+      height: 100%;
+      width: 50%;
+
+      ul {
+        @include display(flex, center, flex-end);
+        width: 100%;
+        gap: 10px;
+        height: 100%;
+        .pesquisa {
+          @include display(flex, center, flex-end);
+          width: 100%;
+          height: 100%;
+          transition: all 0.5s;
+          #search {
+            height: 100%;
+            width: 0px;
+
+            padding-left: 5px;
+            border: none;
+            outline: none;
+            font-family: $font-main;
+            color: $text-color;
+            letter-spacing: 1px;
+            background-color: transparent;
+            transition: all 0.5s;
+            &::placeholder {
+              color: transparent;
+            }
+          }
+          ion-icon {
+            transition: all 0.5s;
+            height: 100%;
+            font-size: 2em;
+            color: $text-color;
+            transform: rotate(-45deg);
+          }
+
+          &:hover {
+            background-color: $color-transparencia;
+            #search {
+              width: 50%;
+              background-color: $color-transparencia;
+              &::placeholder {
+                color: $text-color;
+              }
+            }
+            ion-icon {
+              color: $green;
+              transform: rotate(1deg);
+            }
+          }
+        }
+
+        .infantil {
+          @include display(flex, center, flex-end);
+          height: 100%;
+          a {
+            color: $text-color;
+            transition: all 0.5s;
+            &:hover {
+              color: $green;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .portfolio {
+          @include display(flex, center, center);
+          a {
+            img {
+              width: 2em;
+              transition: all 0.5s;
+              &:hover {
+                transform: rotate(90deg);
+              }
+            }
+          }
+        }
+
+        .user {
+          @include display(flex, center, flex-end);
+          height: 100%;
+          width: 3em;
+          #userImage {
+            border: 2px solid $text-color;
+            border-radius: 8px;
+            width: 100%;
+            transition: all 0.5s;
+            &:hover {
+              border-radius: 5px;
+              border: 2px solid $green;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    @include display(flex, center, center);
+    flex-direction: column;
+    width: 100%;
+    z-index: 1;
+    .indication {
+      @include display(block, center, center);
+      background: url('./../assets/bgOsilmarillion.jpg') top;
+      background-size: cover;
+      box-shadow: inset 20px 60px 60px black, inset 20px -60px 60px black,
+        inset 20px 60px 60px black, inset -60px -60px 60px black;
+      width: 100%;
+      height: 100vh;
+      margin-top: -65px;
+      padding-bottom: 50px;
+
+      .film {
+        @include display(flex, start, flex-end);
+        flex-direction: column;
+        padding: $padding-container;
+        width: 100%;
+        height: 100%;
+        .seloSerie {
+          margin-left: 5px;
+          margin-bottom: 5px;
+          height: 4%;
+        }
+        .logoFilm {
+          height: 10%;
+        }
+
+        .sinopse {
+          @include display(flex, start, center);
+          width: 65%;
+          flex-direction: column;
+          padding: 50px 0;
+          font-family: $font-main;
+          font-size: 1rem;
+          color: $text-color;
+        }
+        .buttons-info {
+          @include display(flex, center, space-between);
+
+          width: 100%;
+          height: 3em;
+
+          .buttons {
+            @include display(flex, center, space-between);
+            width: 30%;
+            .watch {
+              @include display(flex, center, center);
+              height: 2em;
+              width: 5em;
+              border-radius: 10px;
+              gap: 10px;
+              font-family: $font-main;
+              font-size: 2rem;
+              border-style: none;
+              transition: 0.3s;
+              cursor: pointer;
+              &:hover {
+                transition: 0.3s;
+                opacity: 0.5;
+                ion-icon {
+                  transition: 0.5s;
+                  color: $green;
+                }
+              }
+            }
+
+            .infoFilm {
+              @include display(flex, center, center);
+              height: 3em;
+              width: 8em;
+              border-radius: 10px;
+              gap: 10px;
+              font-family: $font-main;
+              font-size: 1rem;
+              border-style: none;
+              transition: 0.3s;
+              cursor: pointer;
+              &:hover {
+                transition: 0.3s;
+                opacity: 0.5;
+                ion-icon {
+                  transition: 0.5s;
+                  color: $green;
+                }
+              }
+            }
+          }
+
+          .etariedade {
+            @include display(flex, center, flex-start);
+            width: 10%;
+            padding-left: 20px;
+            background-color: $color-transparencia;
+            border-left: 2px solid $text-color;
+            height: 100%;
+
+            .idade {
+              @include display(flex, center, center);
+              font-family: $font-main;
+              font-size: 15pt;
+              color: $text-color;
+              width: 40px;
+              height: 40px;
+              border-radius: 10px;
+              background-color: red;
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      @include display(flex, center, center);
+      flex-direction: column;
+      background-color: $color-transparencia;
+      width: 100%;
+      height: 100vh;
+      color: $text-color;
+      font-family: $font-main;
+      .tittleMovie {
+        padding-left: 55px;
+      }
+      .rowMovie {
+        @include display(flex, center, space-around);
+        padding: $padding-container;
+        height: 12em;
+        gap: 10px;
+        backdrop-filter: blur(1px);
+        background: transparent;
+        .movie {
+          @include display(flex, center, center);
+
+          height: 8em;
+          width: 15em;
+          transition: 0.3s;
+          /*  margin-right: 10px; */
+
+          .pictureMovie {
+            @include display(flex, center, center);
+            height: 100%;
+            width: 100%;
+            transition: 0.3s;
+            &:hover {
+              height: 100%;
+              width: 100%;
+              box-shadow: -5px 5px 0px $green;
+            }
+          }
+
+          &:hover {
+            height: 25%;
+            width: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  @include display(flex, center, center);
+
+  width: 100%;
+  height: 50px;
+  padding: 10px 55px 10px 55px;
+  border-top: 1px solid $green;
+  margin-top: 100px;
+
+  .more {
+    @include display(flex, center, space-between);
+
+    a {
+      color: $text-color;
+    }
+  }
+}

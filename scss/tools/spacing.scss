@@ -1,0 +1,9 @@
+@mixin display($display, $align-items, $justify-content) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+$padding-bar: 10px 55px;
+$padding-barMobille: 5px 25px;
+$padding-container: 5px 50px;

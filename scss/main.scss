@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+@import './tools/colors.scss';
+@import './tools/spacing.scss';
+@import './tools/typography.scss';
+@import './pages/home.scss';
+@import './tools/mediaScreen.scss';
